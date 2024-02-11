@@ -5,7 +5,7 @@ namespace Infrastructure.Entities;
 public class UserEntity
 {
     [Key]
-    public string Id = Guid.NewGuid().ToString();
+    public string Id { get; set; } = Guid.NewGuid().ToString();
     [Required, StringLength(100)]
     public string Email { get; set; } = null!;
     [Required, StringLength(100)]
